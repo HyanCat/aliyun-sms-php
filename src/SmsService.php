@@ -19,7 +19,7 @@ class SmsService
 
     public function __construct($accessID, $accessKey, $region = 'cn-hangzhou')
     {
-        $clientProfile = \DefaultProfile::getProfile("cn-hangzhou", $accessID, $accessKey);
+        $clientProfile = \DefaultProfile::getProfile($region, $accessID, $accessKey);
         $this->client  = new \DefaultAcsClient($clientProfile);
     }
 

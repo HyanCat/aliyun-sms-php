@@ -14,13 +14,16 @@ class SmsTest extends PHPUnit_Framework_TestCase
 
     public function __construct()
     {
-        $this->sms = new SmsService('xxx', 'yyy');
+        $this->sms = new SmsService('TEST_APP_ID', 'TEST_APP_KEY');
     }
 
     public function testSendMessage()
     {
-        $this->sms->send('1234567890', function ($message) {
-            $message->with(['foo' => 'bar'])->template('SMS_13190010')->signName('阿里云');
+        $this->sms->send('[PHONE_NUMBER]', function ($message) {
+            $message->template('SMS_13190009')->with([
+                'code'    => '我是验证码',
+                'product' => '我是产品',
+            ])->signName('我是签名');
         });
     }
 }
