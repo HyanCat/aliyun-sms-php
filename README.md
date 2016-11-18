@@ -1,6 +1,6 @@
 # aliyun-sms-php
 
-阿里云 SMS PHP
+阿里云短信服务 for PHP.
 
 ## Installation
 
@@ -26,7 +26,7 @@ $sms->send('[PHONE_NUMBER]', function ($message) {
 
 ## License
 
-The source code is under [MIT License]().
+The source code is under [MIT License](https://github.com/HyanCat/aliyun-sms-php/blob/master/LICENSE).
 
 
 
