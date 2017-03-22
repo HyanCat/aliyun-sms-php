@@ -42,10 +42,13 @@ class SmsService
             $request->setParamString($message->getParams());
             try {
                 $response = $this->client->getAcsResponse($request);
-                print_r($response);
+//                 print_r($response);
+                return $response;
             } catch (\ClientException $e) {
                 throw new SmsException($e->getErrorMessage(), -1);
             }
         }
+        
+        return false;
     }
 }
