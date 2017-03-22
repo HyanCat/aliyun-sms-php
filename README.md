@@ -1,6 +1,10 @@
 # aliyun-sms-php
 
-阿里云短信服务 for PHP.
+阿里云短信服务 for PHP. 
+
+> ***Deprecated!!!***
+> 
+> *Use https://github.com/HyanCat/short-messenger instead.*
 
 ## Installation
 
